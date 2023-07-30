@@ -154,7 +154,7 @@ Congratulations! You've successfully squashed commits in your Git repository. Sq
 
 Remember that rewriting history should be done with caution, especially if you're collaborating with other developers. Always communicate and coordinate changes with your team to avoid conflicts and ensure a smooth development process.
 
-Now you can use this knowledge to maintain a clean and organized commit history in your projects. Happy coding!s
+Now you can use this knowledge to maintain a clean and organized commit history in your projects. Happy coding!
 
 
 
