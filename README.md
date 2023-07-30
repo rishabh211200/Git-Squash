@@ -31,6 +31,9 @@ Note: Make sure to adjust the path to notepad++.exe based on the installation di
 
 #### Step 1: Make sure you are in the right branch (In branch you need to make changes)
 ![AzureOnlineBranchSS](https://github.com/rishabh211200/Git-Squash/assets/55344761/88f6c8cf-2e6c-4217-934f-082ef50c4d08)
-Right here You can see I am into a branch named 959709_BKK_BR_Config_Creation, And I need to make sure that I am into same branch
 
+Right here You can see I am into a branch named 959709_BKK_BR_Config_Creation online, And I need to make sure that I am into same branch in my local as well using the below command
+
+    git branch
+![CommandPromptGitBranch](https://github.com/rishabh211200/Git-Squash/assets/55344761/587377da-486e-4282-b3ce-2d8ef2ec0b64)
 
