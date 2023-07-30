@@ -30,11 +30,13 @@ Note: Make sure to adjust the path to notepad++.exe based on the installation di
 ### Steps to Squash Commits, Edit Commits History, Rename Commit Messages :-
 
 #### Step 1: Make sure you are in the right branch (In branch you need to make changes)
+
 ![AzureOnlineBranchSS](https://github.com/rishabh211200/Git-Squash/assets/55344761/88f6c8cf-2e6c-4217-934f-082ef50c4d08)
 
 Right here You can see I am into a branch named 959709_BKK_BR_Config_Creation online, And I need to make sure that I am into same branch in my local as well using the below command
 
     git branch
+
 ![CommandPromptGitBranch](https://github.com/rishabh211200/Git-Squash/assets/55344761/587377da-486e-4282-b3ce-2d8ef2ec0b64)
 
 #### Step 2: Identify the Commits
@@ -62,9 +64,11 @@ Here, in our case we are going to make use of HEAD~X, so we are going to pick mu
     git rebase -i HEAD~3
 
 Here 3 represents number of commits you need to pick from top/head.
+
 ![git rebase cmd](https://github.com/rishabh211200/Git-Squash/assets/55344761/5f9031c4-8f52-45a5-abab-8c1ba7a90de8)
 
 After we press enter, Notepad++ will be opened as editor like below:
+
 ![NotepaddRebaseEditor](https://github.com/rishabh211200/Git-Squash/assets/55344761/0fd316a1-a610-4e2c-bc82-022b6b5b28b8)
 
 In above image you can see in line number 1,2 & 3 we are having our commit messages, At the top we are having oldest one and at bottom we are having latest.
@@ -72,12 +76,16 @@ We will be squashing latest and second latest into the oldest.
 
 For doing the same we are going to replace 'pick' with 's'/'squash' for the below 2 commits.
 For example, if you have three commits to squash into the base commit, your interactive rebase file might look like this:
+
 ![squashNotepad](https://github.com/rishabh211200/Git-Squash/assets/55344761/dfb7746e-d4d5-44b3-8fcb-39ea1d6a2057)
+
 Save and close the rebase editor.
 
 After saving the interactive rebase file, Git will prompt you to edit the commit message for the new combined commit. You can keep the existing commit message or modify it as needed.
 Now another notepad++ window will open to make changes in commit message:
+
 ![EditCommitMessage](https://github.com/rishabh211200/Git-Squash/assets/55344761/b7ca8408-f496-4d8c-b4ea-8fb28b63fb92)
+
 Here in above image we can see the commit messages we had used previously, Now we are going to make changes to them and make a single commit message.
 
 We will be commenting out the remaining 2 messages or we can remove all messages and write a new one and at last we need to make sure in the whole file we should have only one line un-commented which is going to be new commit message in our branch.
