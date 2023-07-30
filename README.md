@@ -7,12 +7,12 @@ Squashing multiple commits in Azure DevOps is a useful technique to combine mult
 
 ---
 
-### Prerequisites:
+## Prerequisites:
 Before proceeding with the squashing process, ensure that you have the following prerequisites:
 
 * Git Installed: Make sure Git is installed on your system. If not, download and install it from the official Git website.
 * Repository Setup: Have a Git repository set up with the commits you want to squash. Make sure you are on the branch containing the commits you wish to squash.
-* We prefer you to use Notepad++ as your Git Editor: By configuring Notepad++ as the default editor for Git, you can leverage its advanced features and user-friendly interface while squashing commits. Notepad++ provides syntax highlighting, code folding, and various plugins that can enhance your editing experience within Git. Follow the steps mentioned in this wiki page to squash multiple commits in Azure DevOps using the Git terminal with the added convenience of using Notepad++ as your editor.
+* **Note**: We prefer you to use Notepad++ as your Git Editor, By configuring Notepad++ as the default editor for Git, you can leverage its advanced features and user-friendly interface while squashing commits. Notepad++ provides syntax highlighting, code folding, and various plugins that can enhance your editing experience within Git. Follow the steps mentioned in this wiki page to squash multiple commits in Azure DevOps using the Git terminal with the added convenience of using Notepad++ as your editor.
 
 * #### Steps to configure Notepad++ as the default Git editor:
 
@@ -32,9 +32,9 @@ Note: Make sure to adjust the path to notepad++.exe based on the installation di
 
 ---
 
-### Steps to Squash Commits, Edit Commits History, Rename Commit Messages :-
+## Steps to Squash Commits, Edit Commits History, Rename Commit Messages :-
 
-#### Step 1: Make sure you are in the right branch (In branch you need to make changes)
+### Step 1: Make sure you are in the right branch (In branch you need to make changes)
 
 ![AzureOnlineBranchSS](https://github.com/rishabh211200/Git-Squash/assets/55344761/88f6c8cf-2e6c-4217-934f-082ef50c4d08)
 
@@ -44,7 +44,7 @@ Right here You can see I am into a branch named 959709_BKK_BR_Config_Creation on
 
 ![CommandPromptGitBranch](https://github.com/rishabh211200/Git-Squash/assets/55344761/587377da-486e-4282-b3ce-2d8ef2ec0b64)
 
-#### Step 2: Identify the Commits
+### Step 2: Identify the Commits
 
 First, identify the range of commits you want to squash. You can use the git log command to view the commit history and find the commit hashes of the commits you want to squash.
 
@@ -56,7 +56,7 @@ Note down the commit hashes of the commits you want to squash. The oldest commit
 
 Here, you can see three commits, I am going to make changes in.
 
-#### Step 3: Start an Interactive Rebase
+### Step 3: Start an Interactive Rebase
 
 Run the following command to start an interactive rebase:
 
@@ -86,6 +86,8 @@ For example, if you have three commits to squash into the base commit, your inte
 
 Save and close the rebase editor.
 
+### Step 4: Edit the Commit Message
+
 After saving the interactive rebase file, Git will prompt you to edit the commit message for the new combined commit. You can keep the existing commit message or modify it as needed.
 Now another notepad++ window will open to make changes in commit message:
 
@@ -100,7 +102,7 @@ After following the above steps, Save and close the rebase editor. You must see 
 ![SuccessfullyRebased](https://github.com/rishabh211200/Git-Squash/assets/55344761/0fd788fe-f83d-4bc8-aa46-2a4aa17fb083)
 
 
-#### Step 5: Push the Changes
+### Step 5: Push the Changes
 
 Now that you've squashed the commits locally, you may need to force-push the changes to the remote repository if the commits were already pushed.
 
@@ -116,7 +118,7 @@ and now after force update, you can check online in your Pull Request/Commit His
 
 ---
 
-### Bonus
+## Bonus - Different Rebase Actions
 
 During an interactive rebase, you can use various "actions" to modify the commit history. These actions are specified in the interactive rebase editor, where you can choose what to do with each commit. Here are the main rebase actions and their purposes:
 
@@ -146,7 +148,7 @@ Keep in mind that rewriting the commit history using rebase actions can alter th
 
 ---
 
-### Conclusion
+## Conclusion
 
 Congratulations! You've successfully squashed commits in your Git repository. Squashing commits can help keep your commit history clean and concise, making it easier for others to understand the changes in your codebase.
 
