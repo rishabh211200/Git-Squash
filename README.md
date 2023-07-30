@@ -133,7 +133,7 @@ To perform an interactive rebase with these actions, you can use the following c
 
     git rebase -i <commit>
 
-Replace **"<commit>"** with the commit before the first commit you want to modify. An editor will open, displaying the list of commits and their actions. Change the action keyword from **'pick'** to the desired action for each commit, save the file, and close the editor to apply the changes.
+Replace **"commit"** with the commit before the first commit you want to modify. An editor will open, displaying the list of commits and their actions. Change the action keyword from **'pick'** to the desired action for each commit, save the file, and close the editor to apply the changes.
 
 Keep in mind that rewriting the commit history using rebase actions can alter the commit hashes, so it's essentials to use this feature carefully, especially on shared branches. Always communicate with your team to ensure a smooth collaboration process.
 
