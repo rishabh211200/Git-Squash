@@ -90,9 +90,61 @@ Here in above image we can see the commit messages we had used previously, Now w
 
 We will be commenting out the remaining 2 messages or we can remove all messages and write a new one and at last we need to make sure in the whole file we should have only one line un-commented which is going to be new commit message in our branch.
 
-After following the above steps, Save and close the rebase editor.
+After following the above steps, Save and close the rebase editor. You must see like this:
+
+![SuccessfullyRebased](https://github.com/rishabh211200/Git-Squash/assets/55344761/0fd788fe-f83d-4bc8-aa46-2a4aa17fb083)
 
 
+#### Step 5: Push the Changes
+
+Now that you've squashed the commits locally, you may need to force-push the changes to the remote repository if the commits were already pushed.
+
+**Note: Be cautious when force-pushing, as it rewrites the commit history. Only do this if you're sure it won't affect others working on the same branch.**
+
+    git push -f
+
+![git push F](https://github.com/rishabh211200/Git-Squash/assets/55344761/5ffaebc4-b2a1-4a6b-b21c-90bec84aaa7b)
+
+and now after force update, you can check online in your Pull Request/Commit History. That must be updated till now.
+
+![Final](https://github.com/rishabh211200/Git-Squash/assets/55344761/9b2a903f-d3a6-4b57-9eda-a7d525dece94)
+
+### Bonus
+
+During an interactive rebase, you can use various "actions" to modify the commit history. These actions are specified in the interactive rebase editor, where you can choose what to do with each commit. Here are the main rebase actions and their purposes:
+
+* **pick** or **p**: This is the default action for each commit in an interactive rebase. It means that the commit will be included as is.
+
+* **reword** or **r**: This action allows you to edit the commit message of the selected commit.
+
+* **edit** or **e**: This action stops the rebase process after applying the selected commit. It allows you to make changes to the files in the commit, amend the commit, and then continue the rebase.
+
+* **squash** or **s**: This action allows you to combine the selected commit with the previous commit. The commit messages will be merged, and you'll be prompted to edit the new commit message.
+
+* **fixup**: This action is similar to squash, but it discards the commit message of the selected commit and keeps the message of the commit it's squashed into.
+
+* **drop** or **d**: This action removes the selected commit from the history. The commit will be skipped, and it won't be included in the final result.
+
+* **exec**: This action allows you to run a shell command after applying the selected commit. It can be useful for automated tasks during the rebase process.
+
+* **label**: This action assigns a label to the selected commit. Labels can be useful for organizing and managing commits during the rebase.
+
+To perform an interactive rebase with these actions, you can use the following command:
+
+    git rebase -i <commit>
+
+Replace **'<commit>'** with the commit before the first commit you want to modify. An editor will open, displaying the list of commits and their actions. Change the action keyword from **'pick'** to the desired action for each commit, save the file, and close the editor to apply the changes.
+
+Keep in mind that rewriting the commit history using rebase actions can alter the commit hashes, so it's essentials to use this feature carefully, especially on shared branches. Always communicate with your team to ensure a smooth collaboration process.
+
+
+### Conclusion
+
+Congratulations! You've successfully squashed commits in your Git repository. Squashing commits can help keep your commit history clean and concise, making it easier for others to understand the changes in your codebase.
+
+Remember that rewriting history should be done with caution, especially if you're collaborating with other developers. Always communicate and coordinate changes with your team to avoid conflicts and ensure a smooth development process.
+
+Now you can use this knowledge to maintain a clean and organized commit history in your projects. Happy coding!s
 
 
 
