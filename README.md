@@ -36,13 +36,13 @@ Note: Make sure to adjust the path to notepad++.exe based on the installation di
 
 ### Step 1: Make sure you are in the right branch (In branch you need to make changes)
 
-![AzureOnlineBranchSS](https://github.com/rishabh211200/Git-Squash/assets/55344761/88f6c8cf-2e6c-4217-934f-082ef50c4d08)
+![AzureOnlineBranchSS](https://github.com/rishabh211200/Git-Squash/assets/55344761/ae0eee38-a15c-42cc-b0dd-db7d2cb9d957)
 
 Right here You can see I am into a branch named 959709_BKK_BR_Config_Creation online, And I need to make sure that I am into same branch in my local as well using the below command
 
     git branch
 
-![CommandPromptGitBranch](https://github.com/rishabh211200/Git-Squash/assets/55344761/587377da-486e-4282-b3ce-2d8ef2ec0b64)
+![CommandPromptGitBranch](https://github.com/rishabh211200/Git-Squash/assets/55344761/97643860-f0ba-48aa-82c2-d9ee1dfbd026)
 
 ### Step 2: Identify the Commits
 
@@ -52,7 +52,7 @@ First, identify the range of commits you want to squash. You can use the git log
 
 Note down the commit hashes of the commits you want to squash. The oldest commit in the range will be the "base" commit.
 
-![GitLogCMD](https://github.com/rishabh211200/Git-Squash/assets/55344761/92cce4c4-db0e-47cc-9c17-038238f3aab6)
+![GitLogCMD](https://github.com/rishabh211200/Git-Squash/assets/55344761/4f779ba0-6344-4763-80bf-6cccbfdf6060)
 
 Here, you can see three commits, I am going to make changes in.
 
@@ -70,11 +70,11 @@ Here, in our case we are going to make use of HEAD~X, so we are going to pick mu
 
 Here 3 represents number of commits you need to pick from top/head.
 
-![git rebase cmd](https://github.com/rishabh211200/Git-Squash/assets/55344761/5f9031c4-8f52-45a5-abab-8c1ba7a90de8)
+![git rebase cmd](https://github.com/rishabh211200/Git-Squash/assets/55344761/b073f2aa-93c8-4d7c-930a-6d30670cdee3)
 
 After we press enter, Notepad++ will be opened as editor like below:
 
-![NotepaddRebaseEditor](https://github.com/rishabh211200/Git-Squash/assets/55344761/0fd316a1-a610-4e2c-bc82-022b6b5b28b8)
+![NotepaddRebaseEditor](https://github.com/rishabh211200/Git-Squash/assets/55344761/46890ac5-1932-4d59-8913-5abdac93ed56)
 
 In above image you can see in line number 1,2 & 3 we are having our commit messages, At the top we are having oldest one and at bottom we are having latest.
 We will be squashing latest and second latest into the oldest.
@@ -82,7 +82,7 @@ We will be squashing latest and second latest into the oldest.
 For doing the same we are going to replace 'pick' with 's'/'squash' for the below 2 commits.
 For example, if you have three commits to squash into the base commit, your interactive rebase file might look like this:
 
-![squashNotepad](https://github.com/rishabh211200/Git-Squash/assets/55344761/dfb7746e-d4d5-44b3-8fcb-39ea1d6a2057)
+![squashNotepad](https://github.com/rishabh211200/Git-Squash/assets/55344761/f3c74780-7fc6-4bbe-b41a-93d91f90e20f)
 
 Save and close the rebase editor.
 
@@ -91,7 +91,7 @@ Save and close the rebase editor.
 After saving the interactive rebase file, Git will prompt you to edit the commit message for the new combined commit. You can keep the existing commit message or modify it as needed.
 Now another notepad++ window will open to make changes in commit message:
 
-![EditCommitMessage](https://github.com/rishabh211200/Git-Squash/assets/55344761/b7ca8408-f496-4d8c-b4ea-8fb28b63fb92)
+![EditCommitMessage](https://github.com/rishabh211200/Git-Squash/assets/55344761/1b1f5311-5faa-4f46-949b-2ab669567547)
 
 Here in above image we can see the commit messages we had used previously, Now we are going to make changes to them and make a single commit message.
 
@@ -99,8 +99,7 @@ We will be commenting out the remaining 2 messages or we can remove all messages
 
 After following the above steps, Save and close the rebase editor. You must see like this:
 
-![SuccessfullyRebased](https://github.com/rishabh211200/Git-Squash/assets/55344761/0fd788fe-f83d-4bc8-aa46-2a4aa17fb083)
-
+![SuccessfullyRebased](https://github.com/rishabh211200/Git-Squash/assets/55344761/1e17aefd-7f16-43c2-a984-deb895217071)
 
 ### Step 5: Push the Changes
 
@@ -110,11 +109,11 @@ Now that you've squashed the commits locally, you may need to force-push the cha
 
     git push -f
 
-![git push F](https://github.com/rishabh211200/Git-Squash/assets/55344761/5ffaebc4-b2a1-4a6b-b21c-90bec84aaa7b)
+![git push F](https://github.com/rishabh211200/Git-Squash/assets/55344761/3bdd2fe3-b920-4ee5-a501-7d97adcbd4a0)
 
 and now after force update, you can check online in your Pull Request/Commit History. That must be updated till now.
 
-![Final](https://github.com/rishabh211200/Git-Squash/assets/55344761/9b2a903f-d3a6-4b57-9eda-a7d525dece94)
+![Final](https://github.com/rishabh211200/Git-Squash/assets/55344761/2a07a4c6-c4ed-4f7f-86f3-2363caf7e4fd)
 
 ---
 
