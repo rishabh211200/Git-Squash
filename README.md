@@ -10,7 +10,7 @@ Before proceeding with the squashing process, ensure that you have the following
 * Repository Setup: Have a Git repository set up with the commits you want to squash. Make sure you are on the branch containing the commits you wish to squash.
 * We prefer you to use Notepad++ as your Git Editor: By configuring Notepad++ as the default editor for Git, you can leverage its advanced features and user-friendly interface while squashing commits. Notepad++ provides syntax highlighting, code folding, and various plugins that can enhance your editing experience within Git. Follow the steps mentioned in this wiki page to squash multiple commits in Azure DevOps using the Git terminal with the added convenience of using Notepad++ as your editor.
 
-#### Steps to configure Notepad++ as the default Git editor:
+* #### Steps to configure Notepad++ as the default Git editor:
 
 1. Open the Git Bash Terminal.
   
