@@ -1,7 +1,11 @@
 # Git-Squashing/Editing Commits
 
+---
+
 ## Introduction:
 Squashing multiple commits in Azure DevOps is a useful technique to combine multiple commits into a single, more cohesive commit. This helps in maintaining a clean and organized commit history. In this guide, we will walk you through the process of squashing commits using the Git command line interface.
+
+---
 
 ### Prerequisites:
 Before proceeding with the squashing process, ensure that you have the following prerequisites:
@@ -26,6 +30,7 @@ Note: Make sure to adjust the path to notepad++.exe based on the installation di
    
 4. This should display the path to Notepad++ if the configuration was successful.
 
+---
 
 ### Steps to Squash Commits, Edit Commits History, Rename Commit Messages :-
 
@@ -109,6 +114,8 @@ and now after force update, you can check online in your Pull Request/Commit His
 
 ![Final](https://github.com/rishabh211200/Git-Squash/assets/55344761/9b2a903f-d3a6-4b57-9eda-a7d525dece94)
 
+---
+
 ### Bonus
 
 During an interactive rebase, you can use various "actions" to modify the commit history. These actions are specified in the interactive rebase editor, where you can choose what to do with each commit. Here are the main rebase actions and their purposes:
@@ -137,6 +144,7 @@ Replace **"commit"** with the commit before the first commit you want to modify.
 
 Keep in mind that rewriting the commit history using rebase actions can alter the commit hashes, so it's essentials to use this feature carefully, especially on shared branches. Always communicate with your team to ensure a smooth collaboration process.
 
+---
 
 ### Conclusion
 
